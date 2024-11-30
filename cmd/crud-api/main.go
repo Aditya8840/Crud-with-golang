@@ -33,6 +33,7 @@ func main() {
 	signal.Notify(done, os.Interrupt, syscall.SIGINT, syscall.SIGTERM)
 
 	go func() {
+		fmt.Println("Server started at", cfg.HttpServer.Address)
 		if err := server.ListenAndServe(); err != nil {
 			log.Fatalf("failed to listen and serve: %s", err)
 		}

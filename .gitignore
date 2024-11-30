@@ -28,4 +28,4 @@ go.work.sum
 storage/*.db
 
 # Config file
-config/*.yaml
+config/dev.yaml
